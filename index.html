@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat">
+</head>
+
+<body>
+  <header>
+    <h1>Can you read my mind?</h1>
+  </header>
+
+  <div id="overlay" onclick="off()">
+    <p id="pick">I'm thinking of a number between 1 - 100. <br>Can you get it within 5 tries?</p>
+    <button type="submit" id="start"><img src="challengeAccepted.png"></button>
+  </div>
+
+  <div id="finOverlay" onclick="finOff()">
+    <p id="winOrLose"></p>
+    <button type="submit" id="newGame" onclick="newGame()">New Game</button>
+  </div>
+
+  <div id="guess-feedback">
+    <p></p>
+  </div>
+
+  <div>
+    <p id="lowerOrHigher"></p>
+  </div>
+
+  <div id="board">
+    <div>
+      <p id="numLeft"></p>
+      <input id="pickNum" placeholder="1 - 100">
+      <button type="submit" id="submit">Submit</button>
+
+
+      <div id="prevGuess">
+          <p class="guessText guess"></p>
+          <p class="guessText guess"></p>
+          <p class="guessText guess"></p>
+          <p class="guessText guess"></p>
+          <p class="guessText guess"></p>
+      </div> <!-- end prevGuess -->
+    </div>
+
+  </div> <!-- end board -->
+
+  <script src='js/guessing-game.js'></script>
+</body>
+
+</html>
